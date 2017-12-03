@@ -1,4 +1,4 @@
-(ns clojure-app.core 
+(ns clojure-sandbox.core 
   (:require [clojure.java.io :as io]
             [clojure.core.async :as async])
   (:import (java.net ServerSocket)))
