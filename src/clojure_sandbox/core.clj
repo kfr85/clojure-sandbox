@@ -6,6 +6,10 @@
 ; ソケット通信
 (def port 8080)
 
+; input stream
+(defn parse-input [in]
+  (when-let [line (.readLine (io/reader in))]))
+
 ; fiszbuzz
 (defn fizzbuzz
   [num]
@@ -29,7 +33,7 @@
           (with-open [s socket
                       in (io/input-stream (.getInputStream s))
                       out (io/output-stream (.getOutputStream s))]
-            (prn "in:" in "out:" out)
+            (prn (parse-input in))
           )
         )
       )
